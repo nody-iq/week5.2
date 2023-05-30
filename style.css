@@ -1,0 +1,218 @@
+/*Mohammed's css*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  font-family: LabGrotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 70pc;
+  margin: 0 auto;
+  color: #4c4d5f;
+}
+
+body {
+  background-image: url("./Rectangle.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80rem;
+  background-position-x: 56pc;
+  background-position-y: -30pc;
+}
+
+.plansTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plansTitleContainer > div:first-child {
+  flex-grow: 1;
+  font-size: 2rem;
+}
+
+.plansTitleContainer > div:nth-child(2) > div:first-child {
+  color: #00b289;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.plansTitleContainer > div:nth-child(2) > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  gap: 0px 10px;
+}
+
+.plansTitleContainer > div:nth-child(2) > div:nth-child(2) > div:last-child {
+  color: gray;
+}
+
+.plansCardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3pc;
+  gap: 0pc 3pc;
+}
+
+.plansCardsContainer > div {
+  width: 50%;
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 4px;
+  padding: 4pc 3pc;
+  box-shadow: 0px 0px 15px -6px lightgray;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1pc;
+    width: 100%;
+  }
+  .plansCardsContainer {
+    flex-direction: column;
+    gap: 3pc 0pc;
+  }
+  .plansCardsContainer > div {
+    width: 100%;
+  }
+}
+
+.plansCardsContainer > div > div:nth-child(2) {
+  display: flex;
+  gap: 0px 0px;
+  align-items: baseline;
+}
+
+.plansCardsContainer > div > div:nth-child(2) > div:first-child {
+  font-size: 2rem;
+  align-self: flex-start;
+}
+
+.plansCardsContainer > div > div:nth-child(2) > div:nth-child(2) {
+  font-size: 4pc;
+}
+
+.plansCardsContainer > div > div:nth-child(2) > div:nth-child(3) {
+  margin-left: 1pc;
+}
+
+.plansCardsContainer > div > div:nth-child(3) {
+  border-top: 3px solid #00b289;
+  margin-top: 2pc;
+  padding-top: 2pc;
+  font-weight: bold;
+  /* line-height: 3; */
+}
+
+.label {
+  background-color: #00b289;
+  color: white;
+  border: none;
+  width: 100%;
+  font-size: 1.2pc;
+  position: absolute;
+  text-align: center;
+  transform: rotate(45deg);
+  padding: 8px 0px;
+  left: 12pc;
+  top: 3.5pc;
+  justify-self: auto;
+  /* transition-: ; */
+}
+
+.plansCardsContainer > div > div:nth-child(3) ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+.plansCardsContainer > div > div:nth-child(3) ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 2pc 0pc;
+  gap: 8px;
+}
+
+.plansCardsContainer > div > button {
+  background-color: #00b289;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 4pc;
+  font-size: 20px;
+}
+
+.new {
+  background-color: #f8db62;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/*Switch Style*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 1px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #00b289;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #00b289;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
